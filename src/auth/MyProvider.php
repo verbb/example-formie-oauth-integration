@@ -9,7 +9,6 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 use verbb\auth\base\ProviderTrait;
-use verbb\auth\models\Token;
 
 class MyProvider extends AbstractProvider
 {
@@ -43,7 +42,7 @@ class MyProvider extends AbstractProvider
         return 'https://www.zohoapis.com';
     }
 
-    public function getBaseApiUrl(?Token $token): ?string
+    public function getBaseApiUrl(): ?string
     {
         return $this->getApiUrl();
     }
